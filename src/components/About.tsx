@@ -4,24 +4,24 @@ const About = () => {
   const highlights = [
     {
       icon: Code2,
-      title: "5+ Years",
-      description: "Professional Experience"
+      title: "3+ Years",
+      description: "Professional Experience",
     },
     {
       icon: Database,
       title: "100K+",
-      description: "Users Served"
+      description: "Users Served",
     },
     {
       icon: Cloud,
       title: "Cloud Expert",
-      description: "AWS & DevOps"
+      description: "AWS & DevOps",
     },
     {
       icon: Shield,
       title: "Security First",
-      description: "OAuth & JWT"
-    }
+      description: "OAuth & JWT",
+    },
   ];
 
   return (
@@ -36,23 +36,32 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               About <span className="gradient-text">Me</span>
             </h2>
-            <p className="text-muted-foreground text-lg">Get to know more about my journey</p>
+            <p className="text-muted-foreground text-lg">
+              Get to know more about my journey
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 animate-fade-in-up">
               <p className="text-lg leading-relaxed">
-                As a <span className="text-primary font-semibold">Full Stack Developer</span> with over five years of experience, 
-                I specialize in creating large-scale web applications using cutting-edge technologies.
+                As a{" "}
+                <span className="text-primary font-semibold">
+                  Full Stack Developer
+                </span>{" "}
+                with over five years of experience, I specialize in creating
+                large-scale web applications using cutting-edge technologies.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                My expertise spans from front-end development with React and Next.js to back-end architecture 
-                using Node.js and various database systems. I've successfully delivered projects that serve 
-                over 100,000 users, focusing on performance, scalability, and security.
+                My expertise spans from front-end development with React and
+                Next.js to back-end architecture using Node.js and various
+                database systems. I've successfully delivered projects that
+                serve over 100,000 users, focusing on performance, scalability,
+                and security.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Years of freelancing and remote work have equipped me with the confidence and expertise 
-                needed to deliver excellent results for clients worldwide.
+                Years of freelancing and remote work have equipped me with the
+                confidence and expertise needed to deliver excellent results for
+                clients worldwide.
               </p>
             </div>
 
@@ -60,13 +69,15 @@ const About = () => {
               {highlights.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                  <div 
+                  <div
                     key={index}
                     className="glass-effect rounded-2xl p-6 hover:bg-card/80 transition-all hover:scale-105 hover:glow-effect"
                   >
                     <Icon className="h-8 w-8 text-primary mb-3" />
                     <h3 className="font-bold text-xl mb-1">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {item.description}
+                    </p>
                   </div>
                 );
               })}

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Github, Linkedin, Briefcase } from "lucide-react";
+import upworkImg from "@/assets/download.png";
 
 const Contact = () => {
   return (
@@ -28,7 +29,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <a 
+                    <a
                       href="mailto:muhammadirfaan048@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
@@ -56,16 +57,30 @@ const Contact = () => {
                       size="lg"
                       variant="outline"
                       className="glass-effect"
-                      onClick={() => window.open('https://www.upwork.com', '_blank')}
+                      onClick={() =>
+                        window.open(
+                          "https://www.upwork.com/freelancers/~0198e443080bd92b02",
+                          "_blank"
+                        )
+                      }
                     >
-                      <Briefcase className="h-5 w-5 mr-2" />
+                      <img
+                        src={upworkImg}
+                        alt="upwork"
+                        className="h-5 w-5 mr-2"
+                      />
                       Upwork
                     </Button>
                     <Button
                       size="lg"
                       variant="outline"
                       className="glass-effect"
-                      onClick={() => window.open('https://github.com', '_blank')}
+                      onClick={() =>
+                        window.open(
+                          "https://github.com/muhammadirfan048",
+                          "_blank"
+                        )
+                      }
                     >
                       <Github className="h-5 w-5 mr-2" />
                       GitHub
@@ -74,7 +89,12 @@ const Contact = () => {
                       size="lg"
                       variant="outline"
                       className="glass-effect col-span-2"
-                      onClick={() => window.open('https://linkedin.com', '_blank')}
+                      onClick={() =>
+                        window.open(
+                          "https://www.linkedin.com/in/muhammad-irfan445/",
+                          "_blank"
+                        )
+                      }
                     >
                       <Linkedin className="h-5 w-5 mr-2" />
                       LinkedIn
@@ -86,9 +106,12 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     Open to freelance opportunities and full-time positions
                   </p>
-                  <Button 
+                  <Button
                     className="w-full gradient-primary hover:opacity-90"
-                    onClick={() => window.location.href = 'mailto:muhammadirfaan048@gmail.com'}
+                    onClick={() =>
+                      (window.location.href =
+                        "mailto:muhammadirfaan048@gmail.com")
+                    }
                   >
                     Send Message
                   </Button>
