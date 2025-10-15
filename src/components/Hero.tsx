@@ -1,16 +1,36 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Download,
-  Github,
-  Linkedin,
-  Mail,
-  Briefcase,
-} from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import upworkImg from "@/assets/download.png";
 
+const titles = [
+  "Full Stack Developer",
+  "Front-End Developer",
+  "ReactJS Developer",
+  "MERN Stack Developer",
+];
+
 const Hero = () => {
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Trigger fade-out
+      setFade(false);
+
+      setTimeout(() => {
+        // Change title after fade-out
+        setIndex((prev) => (prev + 1) % titles.length);
+        // Trigger fade-in
+        setFade(true);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="home"
@@ -37,9 +57,14 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 rounded-full glass-effect text-sm font-medium mb-4">
-              Full Stack Developer
+          {/* Animated Title Badge */}
+          <div className="mb-6 h-10 flex justify-center items-center">
+            <span
+              className={`inline-block px-4 py-2 rounded-full glass-effect text-sm font-medium transition-opacity duration-500 ${
+                fade ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {titles[index]}
             </span>
           </div>
 

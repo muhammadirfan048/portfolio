@@ -6,46 +6,53 @@ const Projects = () => {
   const projects = [
     {
       title: "Captionate",
-      description: "AI-powered caption generation platform with advanced natural language processing",
+      description:
+        "AI-powered caption generation platform with advanced natural language processing",
       url: "https://captionate.app/",
-      tags: ["React", "AI/ML", "Node.js"]
+      tags: ["React", "AI/ML", "Node.js"],
     },
     {
-      title: "NTF GB",
-      description: "Government portal for Gilgit-Baltistan with comprehensive information system",
-      url: "https://ntf-gb.pk/",
-      tags: ["Next.js", "PostgreSQL", "Tailwind"]
+      title: "Trakking Master",
+      description:
+        "Application to manage the trucks import and export, their reports, records, trakking, loading etc",
+      url: "https://trakkingmaster.vercel.app",
+      tags: ["React.js", "PostgreSQL", "TailwindCSS"],
     },
     {
       title: "MusicArt",
-      description: "Music streaming and discovery platform with social features",
+      description:
+        "Music streaming and discovery platform with social features",
       url: "https://musicart.io",
-      tags: ["React", "Socket.io", "MongoDB"]
+      tags: ["React", "Socket.io", "MongoDB"],
     },
     {
       title: "SyntaxRoot",
-      description: "Developer tools and resources platform for modern web development",
+      description:
+        "Developer tools and resources platform for modern web development",
       url: "https://www.syntaxroot.com/",
-      tags: ["TypeScript", "React", "Node.js"]
+      tags: ["TypeScript", "React", "Node.js"],
     },
     {
       title: "Canulo Admin",
-      description: "Comprehensive admin dashboard with analytics and management tools",
+      description:
+        "Comprehensive admin dashboard with analytics and management tools",
       url: "https://canulo.vercel.app/admin/default",
-      tags: ["React", "Redux", "Chart.js"]
+      tags: ["React", "Redux", "Chart.js"],
     },
     {
       title: "Canulo Web",
-      description: "Business management platform with CRM and workflow automation",
+      description:
+        "Business management platform with CRM and workflow automation",
       url: "https://canuloweb.vercel.app/",
-      tags: ["Next.js", "TypeScript", "AWS"]
+      tags: ["Next.js", "TypeScript", "AWS"],
     },
     {
       title: "Broshall Associates",
-      description: "Professional services firm website with modern design and animations",
+      description:
+        "Professional services firm website with modern design and animations",
       url: "https://broshall-associates-wine.vercel.app/",
-      tags: ["React", "Tailwind", "Framer Motion"]
-    }
+      tags: ["React", "Tailwind", "Framer Motion"],
+    },
   ];
 
   return (
@@ -60,7 +67,9 @@ const Projects = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Featured <span className="gradient-text">Projects</span>
             </h2>
-            <p className="text-muted-foreground text-lg">Some of my recent work</p>
+            <p className="text-muted-foreground text-lg">
+              Some of my recent work
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -94,7 +103,7 @@ const Projects = () => {
                     size="sm"
                     variant="outline"
                     className="flex-1 group/btn"
-                    onClick={() => window.open(project.url, '_blank')}
+                    onClick={() => window.open(project.url, "_blank")}
                   >
                     <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     Visit
